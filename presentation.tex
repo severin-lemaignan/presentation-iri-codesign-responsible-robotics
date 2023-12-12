@@ -83,9 +83,9 @@
 %--------------------------------------------------------------------------
 % General presentation settings
 %--------------------------------------------------------------------------
-\title{\Large Understandability}
+\title{\Large End-to-end co-design and Responsible Robotics}
 \subtitle{Some food for thought in the context of HRI}
-\date{{\bf Responsible Robotics} | Dagstuhl Seminar, 11-15 Sep 2023}
+\date{{\bf  Institut de Robòtica i Informàtica Industrial} | UPC, 14 Dec 2023}
 \author{Séverin Lemaignan}
 \institute{{\bf PAL Robotics} Head of Social Robotics, Senior Scientist AI \& HRI}
 
@@ -103,11 +103,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\licenseframe{github.com/severin-lemaignan/2023-understandability-dagstuhl}
+\licenseframe{github.com/severin-lemaignan/presentation-iri-codesign-responsible-robotics}
 
 \maketitle
-
-\imageframe[color=black,caption=www.unesco.org/en/digital-education/ed-tech-tragedy]{ed-tech-tragedy-unesco}
 
 \imageframe{my_background/bg-map}
 
@@ -174,6 +172,7 @@
             }
         \end{column}
         \begin{column}{0.35\linewidth}
+            \vspace{-2em}
             \begin{center}
                 \includegraphics[trim=15cm 0 11cm 0,clip,width=0.7\linewidth]{ranger/ranger_funny_glasses}
             \end{center}
@@ -183,159 +182,39 @@
     \toplogo{logo_bw}
 \end{frame}
 
-\section*{Understandability}
+\begin{frame}[plain]
 
-\begin{frame}{Understandability}
+    \Large {\bf Two questions I want to discuss today}
+    
+    \begin{enumerate}
+        \item<+-> How far can we `push' participatory design? Can we let the
+            end-users do the hard work for us?
 
-    ...`Understandability'?
+        \item<+-> If so, what are the consequences in terms of responsible
+            robotics?
+    \end{enumerate}
 
-    \pause
+\end{frame}
 
-    In EU's \href{https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai}{Ethics Guidelines
-    for Trustworthy AI}, keywords like:
+\begin{frame}{Let set ourselves a challenge}
 
+\begin{exampleblock}{Design \& run a study with:}
+    
     \begin{itemize}
-        \item transparency
-        \item explainability (eg XAI)
-        \item tracability (eg Winfield's \emph{ethical black box})
+        \item<+-> a real robot
+        \item<+-> a real interaction (...with a \textbf{human}!)
+        \item<+-> a \textbf{continuous} interaction (several
+        \item<+-> a \textbf{long} interaction (several weeks)
+        \item<+-> a realistic task (\textbf{large state vector \& action space})
+        \item<+-> \textbf{in the wild}
+        \item<+-> also including \textbf{social behaviours \& social dynamics}
+        \item<+-> ...and of course, the robot should be \textbf{autonomous}
     \end{itemize}
+\end{exampleblock}
 
-    \pause
-
-    Useful mechanistic approach, ...but does it capture well the \emph{feeling}
-    of `understanding' the machine? (ie, in-situ, in-the-moment, intuitive
-    understanding)
-
-    \pause
-
-    In other words, would eg explainability and tracability by themselves be
-    sufficient to establish trust? {\footnotesize (trust \emph{in bridge} vs trust \emph{in
-    people}?)}
-
-    \toplogo{logo_bw}
-\end{frame}
-%
-%\begin{frame}{Do you trust public research funding?}
-%
-%    ``Getting a project funded is really like a lottery!''
-%
-%    \pause
-%
-%    Do you understand the system? ...often yes (...we are part of it!)
-%
-%    However, results are hard to predict, seem at time partially random
-%
-%\end{frame}
-
-\begin{frame}{Do we actually really want to understand our robots?}
-
-    Users (ourselves included) want technology that `just work'; cf Obadia's idea of the inherent \emph{magic} of technology
-
-    \pause
-
-    Example: when people ask something to ChatGPT, they might complain that the
-    result is incorrect (hallucinated or otherwise) $\Rightarrow$ they
-    want the visible, \emph{surface} result to fixed.
-
-    \pause
-
-    Do they want to \emph{understand} why ChatGPT got it wrong? I'd argue that
-    the vast majority do not really care. {\footnotesize Also, psychological
-    angle, eg Nass' Media Equation}
-
-    \pause
-
-    However, I would also argue that, to trust the system, what we really want
-    is to be able to \alert<5>{confidently}\bubblemark{mark1} build a
-    \alert<6>{robust mental model}\bubblemark{mark2}, with a strong \bubblemark{mark3}\alert<7>{predictive
-    power}.
-
-%    \bubble<5>[200][0.5][6cm]{mark1}{extrapolating from known mental models;
-%    building the model implicitly while interacting;...}
-%    \bubble<6>[220][0.5][5cm]{mark2}{once established, the model remains
-%    essentially stable and
-%    valid over time}
-%    \bubble<7>[300][0.5][5cm]{mark3}{this foster the resulting trust}
-
-    \toplogo{logo_bw}
 \end{frame}
 
-\begin{frame}{}
-
-- When did The New York Times first report on "artificial intelligence"?
-
-- I'm unable to provide specific dates or historical details as my knowledge is limited to information available up until September 2021. However, I can tell you that The New York Times has been reporting on artificial intelligence for many years, with coverage dating back to at least the mid-20th century when the concept of AI first emerged. To find the exact date of their first report on artificial intelligence, I recommend searching The New York Times archives or contacting their research department for more specific historical information.
-\end{frame}
-
-{
-\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\bf The Cognitive Correlates of Anthropomorphism}, HRI 2014}
-\begin{frame}{Cognitive Interpretation?}
-
-    \vspace{-1em}
-    \begin{figure}
-        \centering
-        \resizebox{0.9\paperwidth}{!}{
-            \begin{tikzpicture}
-                \baselineskip=8pt
-
-                \path[fill=hriSec1Comp!50] (0,0) rectangle (10.5,2);
-                \path[fill=hriSec1!50] (0,2) rectangle (10.5,4);
-                \path[fill=hriSec3Comp!50] (0,4) rectangle (10.5,6);
-
-                \draw (-0.3,1) node[rotate=90] {Stage 1}
-                (-0.3,3) node[rotate=90] {Stage 2}
-                (-0.3,5) node[rotate=90] {Stage 3};
-
-                \draw[->] (0,0) -- (11,0) node[anchor=north] {$t$};
-                \draw[-|] (0,0) -- (0,6.5) node[anchor=east] {};
-                % Us
-                \draw[ultra thick, ->] (0,0) -- (1,2) -- (3,2) -- (4,4) -- (6,4) -- (7,6) --
-                (9.5,6);
-                \draw[ultra thick, dashed, ->] (3,2) -- (9.5,2);
-                \draw[ultra thick, dashed, ->] (6,4) -- (9.5,4);
-
-                \draw (11,1) node[align=left, anchor=west]{\scriptsize pre-cognitive\\\scriptsize anthropomorphism}; %label
-
-                \draw (11,3) node[align=left, anchor=west] {\scriptsize{projection of existing}\\\scriptsize{mental models}\\\scriptsize{\it (familiarity)}}; %label
-
-                \draw (11,5) node[align=left, anchor=west] {\scriptsize{adapted mental
-                model} \\ $\to$ \scriptsize{adapted interaction}\\\scriptsize{\it (anthropomorphic or not)}}; %label
-
-
-                \draw[dashed,->] (1,0.1) to[bend right] (2,1.9)  node at (4.5,1) {\tiny{\it observation (shape, motion, sound)}}; %label
-
-                \draw[dashed,->] (4,2.1) to[bend right] (5,3.9)  node[align=left] at (7.5,3) {\tiny \it observation (interactive behavior) \\ \tiny \it or short interaction}; %label
-
-                \draw[dashed,->] (7,4.1) to[bend right] (8,5.9)  node[align=left] at (9,5)
-                {\tiny \it contextualized\\ \tiny \it interaction}; %label
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-    \badge[caption=Julia Fink]{colleagues/julia}
-    %\toplogo{logo_bw}
-\end{frame}
-}
-
-\begin{frame}{What means `responsible' in that context?}
-    If we adopt the cognitive perspective of \emph{understanding} the robot as
-    the \textbf{completion of a robust mental model} of the machine, where does
-    that leave us wrt. \emph{responsible} understandability?
-
-    \pause
-
-    $\Rightarrow$ design robots' behaviours to foster the creation of detailed
-    and correct mental models
-
-    \pause
-
-    ...or even let the end-users co-design the robot's cognitive capabilities
-
-    \toplogo{logo_bw}
-\end{frame}
-
-\section*{`End-to-end' co-design}
+\section{`End-to-end' co-design}
 
 \imageframe[color=black,caption=End-to-end co-design: gym coach]{couch25k/hri-169.jpg}
 
@@ -448,7 +327,6 @@ robot competencies}, ICSR 2015;\newline
 
     More importantly,
 
-    \vspace{2em}
 
     \begin{center}
 
@@ -457,13 +335,197 @@ robot competencies}, ICSR 2015;\newline
 
     \end{center}
 
-    \vspace{2em}
+    \toplogo{logo_bw}
+\end{frame}
+
+\section{Responsible Robotics}
+
+\begin{frame}{EU Guidelines for Trustworthy AI checklist}
+    \begin{columns}
+        \begin{column}{0.6\linewidth}
+
+    \begin{itemize}
+        \item human autonomy, human agency
+        \item consent
+        \item human oversight, especially if the system evolves (ML)
+        \item technical robustness and safety
+        \item respect for privacy, data ownership
+        \item traceability, explainability, communication
+        \item unfair bias avoidance, stakeholder participation
+        \item sustainability
+        \item social impact
+        \item Accountability, documenting trade-offs
+
+    \end{itemize}
+        \end{column}
+        \begin{column}{0.4\linewidth}
+            \begin{center}
+                \includegraphics[width=0.8\columnwidth]{eu-ethics-guidelines}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Responsible Robotics and XAI}
+
+    In EU's \href{https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai}{Ethics Guidelines
+    for Trustworthy AI}, keywords like:
+
+    \begin{itemize}
+        \item transparency
+        \item explainability (eg XAI)
+        \item tracability (eg Winfield's \emph{ethical black box}; TRAIL project)
+    \end{itemize}
 
     \pause
+
+    Useful mechanistic approach, ...but does it capture well the \emph{feeling}
+    of `understanding' the machine? (ie, in-situ, in-the-moment, intuitive
+    understanding)
+
+
+    \pause
+
+    In other words, would eg explainability and tracability by themselves be
+    sufficient to establish trust? {\footnotesize (trust \emph{in bridge} vs trust \emph{in
+    people}?)}
+
+    $\Rightarrow$ {\bf understandability ?}
+
+    \toplogo{logo_bw}
+\end{frame}
+%
+%\begin{frame}{Do you trust public research funding?}
+%
+%    ``Getting a project funded is really like a lottery!''
+%
+%    \pause
+%
+%    Do you understand the system? ...often yes (...we are part of it!)
+%
+%    However, results are hard to predict, seem at time partially random
+%
+%\end{frame}
+
+\begin{frame}{Do we actually really want to understand our robots?}
+
+
+    Users (ourselves included) want technology that `just work'; cf Obadia's idea of the inherent \emph{magic} of technology
+
+    \pause
+
+    Example: when people ask something to ChatGPT, they might complain that the
+    result is incorrect (hallucinated or otherwise) $\Rightarrow$ they
+    want the visible, \emph{surface} result to fixed.
+
+    \pause
+
+    Do they want to \emph{understand} why ChatGPT got it wrong? I'd argue that
+    the vast majority do not really care. {\footnotesize Also, psychological
+    angle, eg Nass' Media Equation}
+
+    \pause
+
+    However, I would also argue that, to trust the system, what we really want
+    is to be able to \alert<5>{confidently}\bubblemark{mark1} build a
+    \alert<6>{robust mental model}\bubblemark{mark2}, with a strong \bubblemark{mark3}\alert<7>{predictive
+    power}.
+
+    %\bubble<5>[200][0.5][6cm]{mark1}{extrapolating from known mental models; building the model implicitly while interacting;...}
+
+    %\bubble<6>[220][0.5][5cm]{mark2}{once established, the model remains essentially stable and valid over time}
+
+    %\bubble<7>[300][0.5][5cm]{mark3}{this foster the resulting trust}
+
+
+    \toplogo{logo_bw}
+\end{frame}
+
+{
+\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\bf The Cognitive Correlates of Anthropomorphism}, HRI 2014}
+\begin{frame}{Cognitive Interpretation?}
+
+    \vspace{-1em}
+    \begin{figure}
+        \centering
+        \resizebox{0.9\paperwidth}{!}{
+            \begin{tikzpicture}
+                \baselineskip=8pt
+
+                \path[fill=hriSec1Comp!50] (0,0) rectangle (10.5,2);
+                \path[fill=hriSec1!50] (0,2) rectangle (10.5,4);
+                \path[fill=hriSec3Comp!50] (0,4) rectangle (10.5,6);
+
+                \draw (-0.3,1) node[rotate=90] {Stage 1}
+                (-0.3,3) node[rotate=90] {Stage 2}
+                (-0.3,5) node[rotate=90] {Stage 3};
+
+                \draw[->] (0,0) -- (11,0) node[anchor=north] {$t$};
+                \draw[-|] (0,0) -- (0,6.5) node[anchor=east] {};
+                % Us
+                \draw[ultra thick, ->] (0,0) -- (1,2) -- (3,2) -- (4,4) -- (6,4) -- (7,6) --
+                (9.5,6);
+                \draw[ultra thick, dashed, ->] (3,2) -- (9.5,2);
+                \draw[ultra thick, dashed, ->] (6,4) -- (9.5,4);
+
+                \draw (11,1) node[align=left, anchor=west]{\scriptsize pre-cognitive\\\scriptsize anthropomorphism}; %label
+
+                \draw (11,3) node[align=left, anchor=west] {\scriptsize{projection of existing}\\\scriptsize{mental models}\\\scriptsize{\it (familiarity)}}; %label
+
+                \draw (11,5) node[align=left, anchor=west] {\scriptsize{adapted mental
+                model} \\ $\to$ \scriptsize{adapted interaction}\\\scriptsize{\it (anthropomorphic or not)}}; %label
+
+
+                \draw[dashed,->] (1,0.1) to[bend right] (2,1.9)  node at (4.5,1) {\tiny{\it observation (shape, motion, sound)}}; %label
+
+                \draw[dashed,->] (4,2.1) to[bend right] (5,3.9)  node[align=left] at (7.5,3) {\tiny \it observation (interactive behavior) \\ \tiny \it or short interaction}; %label
+
+                \draw[dashed,->] (7,4.1) to[bend right] (8,5.9)  node[align=left] at (9,5)
+                {\tiny \it contextualized\\ \tiny \it interaction}; %label
+
+            \end{tikzpicture}
+        }
+    \end{figure}
+
+    \badge[caption=Julia Fink]{colleagues/julia}
+    %\toplogo{logo_bw}
+\end{frame}
+}
+
+\begin{frame}{What means `responsible' in that context?}
+    If we adopt the cognitive perspective of \emph{understanding} the robot as
+    the \textbf{completion of a robust mental model} of the machine, where does
+    that leave us wrt. \emph{responsible} understandability?
+
+    \pause
+
+    $\Rightarrow$ design robots' behaviours to foster the creation of detailed
+    and correct mental models
+
+    \pause
+
+    ...or even let the end-users co-design the robot's cognitive capabilities
+
+    \toplogo{logo_bw}
+\end{frame}
+
+
+\begin{frame}{}
+
+
+    \begin{center}
+                \includegraphics[height=4cm]{couch25k/supervised.jpg}
+
+    \large{``It was like training my assistant. Now I let it start with the
+    next participant, while I do stretching with the previous one.''}
+
+    \end{center}
+
+    \vspace{2em}
+
 
     ...does he \emph{understand} the robot? \footnotesize{yes and no}
 
-    \pause
 
     \normalsize ...is it \emph{Responsible Robotics\textcopyright}?
 
@@ -471,7 +533,7 @@ robot competencies}, ICSR 2015;\newline
 \end{frame}
 
 
-\section*{Very brief look at the industry}
+\section{Brief look at the industry}
 
 \begin{frame}{Does it translate to industry?}
     \begin{columns}
@@ -614,48 +676,38 @@ robot competencies}, ICSR 2015;\newline
 \end{frame}
 
 
-\begin{frame}{Summary}
+\begin{frame}{Take-home messages}
     \begin{itemize}
-        \item  \textbf{analytic understanding} vs \textbf{intuitive
-            understanding}: \emph{understand} has a very different meaning for the
-            regulator/designer, and for the non-expert end-user
-        \item \textbf{lifelong responsibility on shifting sands}:
+        \item<+-> \textbf{IML for `end-to-end' participatory design}: it works!
+            requires however a well-understood domain
+
+        \item<+-> \textbf{to make them accept/trust the robot, make them understand
+            it!}: \emph{understand} has however a very different meaning for the
+            regulator/designer, and for the non-expert end-user.
+            \textbf{Analytic understanding} != \textbf{intuitive understanding},
+            ie cognitive modeling
+
+        \item<+-> \textbf{robots exist in whole ecosystems}: need to stop
+            thinking of HRI as dyadic interactions; multiple stakeholders,
+            potentially changing stakeholders, with wildly different needs and
+            goals
+
+        \item<+-> \textbf{lifelong responsibility on shifting sands}:
             interaction is reshaped over time by usage, accommodation,
             individual personality traits; responsibility does not stop at the
             point of sale
-        \item \textbf{robots exist in whole ecosystems}: multiple
-            stakeholders, potentially changing stakeholders, with wildly
-            different needs and goals
     \end{itemize}
 \end{frame}
 
-\section*{3 case-studies}
 
-\begin{frame}{Trustworthy AI checklist}
-    \begin{columns}
-        \begin{column}{0.6\linewidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+    \fullbackground[color=black]{thank_you}
+    \begin{frame}[plain]
+    \end{frame}
+}
 
-    \begin{itemize}
-        \item human autonomy, human agency
-        \item consent
-        \item human oversight, especially if the system evolves (ML)
-        \item technical robustness and safety
-        \item respect for privacy, data ownership
-        \item traceability, explainability, communication
-        \item unfair bias avoidance, stakeholder participation
-        \item sustainability
-        \item social impact
-        \item Accountability, documenting trade-offs
-
-    \end{itemize}
-        \end{column}
-        \begin{column}{0.4\linewidth}
-            \begin{center}
-                \includegraphics[width=0.8\columnwidth]{eu-ethics-guidelines}
-            \end{center}
-        \end{column}
-    \end{columns}
-\end{frame}
+\appendix
 
 % Eco-system 1: stockbot and retail
 \imageframe[color=black]{ecosystems/decathlon-stockbot}
@@ -670,12 +722,5 @@ robot competencies}, ICSR 2015;\newline
 % Eco-system 3: surveillance, healthcare
 \imageframe[color=black]{ecosystems/ari-healthcare}
 \imageframe[scale=0.9]{ecosystems/healthcare-ari}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-    \fullbackground[color=black]{thank_you}
-    \begin{frame}[plain]
-    \end{frame}
-}
 
 \end{document}
